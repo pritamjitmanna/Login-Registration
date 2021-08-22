@@ -4,4 +4,5 @@ In my WebD journey, I tried to make many things using the features and this one 
 I just wanted to implement those features that are much needed in a login portal, with not much of a design in the home page.
 Hope you like it!
 
-I have used Node Js to implement the Backend with MongoDB as its database. The UI is not much completed, just wanted to see things.
+I have used Node Js to implement the Backend with MongoDB as its database. For the template engine, I used Pug template.
+The UI is not much completed, just wanted to see things.
