@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Fruit Cart
+        style 
+            include ../static/login.css
+    body 
+        .container
+            h1 Register 
+                if(failure)
+                    div(id="message" class="failure")
+                        p=failure
+                if(success)
+                    div(id="message" class="success")
+                        p=success
+            form(action="/register", method="post")
+                .field 
+                    label(for="name") Name
+                    #name 
+                        input(type="text" name="name" placeholder="Enter Your Name")
+                .field 
+                    label(for="email") Email
+                    #email 
+                        input(type="text" name="email" placeholder="Enter Your Email")
+                .field 
+                    label(for="password") Password 
+                    #password
+                        input(type="text" name="password" placeholder="Enter Your Password")
+                button(type="submit") Register
+            .regi 
+                p Have a Account 
+                    a(href="/login") Login

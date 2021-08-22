@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Fruits Cart
+        style 
+            include ../static/index.css
+    body 
+        nav  
+            .left 
+                h1 Welcome to Fruit Cart 
+            .right 
+                if (login)
+                    button #[a(href="/profile") #{user}]
+                    form(action="/logout", method="post") 
+                        button Logout
+                else
+                    button #[a(href="/login") Login]
+                    button #[a(href="/register") Register]
+
+        .container 
+            section#main 
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla iste atque cum aliquid consequuntur iusto consequatur neque ad dolorum consectetur est hic minima aspernatur animi molestias voluptates eaque quisquam, quia et deleniti, omnis voluptatibus modi sapiente? Itaque deleniti exercitationem inventore! 
+            
+            section#cards
+                .card 
+                    img(src="./static/pics/fruits.jpeg", alt="")
+                    .info 
+                        h3 Fruits For Your Choice
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, officia ea! Sed dolorum fugit dolorem nobis possimus numquam libero esse dignissimos consectetur earum quibusdam ab aperiam perspiciatis maiores perferendis sunt cum, repellendus assumenda a?
+                .card 
+                    img(src="./static/pics/delivery.jpg", alt="")
+                    .info 
+                        h3 Instant Delivery
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, officia ea! Sed dolorum fugit dolorem nobis possimus numquam libero esse dignissimos consectetur earum quibusdam ab aperiam perspiciatis maiores perferendis sunt cum, repellendus assumenda a?
+                .card 
+                    img(src="./static/pics/cart.jpg", alt="")
+                    .info 
+                        h3 Easy Order
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, officia ea! Sed dolorum fugit dolorem nobis possimus numquam libero esse dignissimos consectetur earum quibusdam ab aperiam perspiciatis maiores perferendis sunt cum, repellendus assumenda a?
+            if(logout!='')
+                #logout
+                    |Thanks #{user} for your time 
+    script(src="../static/index.js") 
+

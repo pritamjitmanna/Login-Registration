@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background: #cfe8ff;
+    border-radius: 2px;
+}
+nav .right button{
+    background: none;
+    outline: none;
+    border: none;
+    padding: 3px 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav .right form{
+    display: inline-block;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+#main{
+    width: 80%;
+}
+
+#cards{
+    display: flex;
+}
+.card{
+    display: flex;
+    border: 2px solid red;
+    margin: 5px 13px;
+    padding: 16px;
+    border-radius: 14px;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+}
+.card .info{
+    text-align: center;
+    margin: 11px;
+    padding: 7px;
+}
+
+.card img{
+    width: 37%;
+    height: 44%;
+    border-radius: 17px;
+}
+
+#logout{
+    width: 79px;
+    position: fixed;
+    color: white;
+    background: black;
+    padding: 6px;
+    border-radius: 7px;
+    bottom: 0;
+    right: 23px;
+}
+
